@@ -20,7 +20,7 @@ export class InstamojoService {
   ) { }
 
   /**
-   * Updates quantity of the given item
+   * to create payment request, this will generate the payment ID.
    */
   public createRequest() {
     const headers = {
@@ -51,7 +51,8 @@ export class InstamojoService {
   }
 
   /**
-   * return remote data from the given source and options, and data path
+   * get call to fetch details fo the payments with a given ID.
+   * @param id
    */
   getPaymentDetails(id) {
     const url = 'https://www.instamojo.com/api/1.1/payments/' + id;
